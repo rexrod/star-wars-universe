@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PlanetComponent } from './components/planet/planet.component';
 
 const appRoutes: Routes = [
-    { path: '', component: PlanetComponent }
+    {path: '', component: PlanetComponent }
 ];
 
 @NgModule({

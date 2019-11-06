@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './shared/components/home/home.component';
 
 import '../assets/styles';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
     declarations: [
@@ -29,9 +30,11 @@ import '../assets/styles';
         MatSidenavModule,
         MatListModule,
         MatButtonModule,
-        MatIconModule
+        MatIconModule,
+        MatCardModule,
     ],
-    providers: [],
+    providers: [
+    ],
     bootstrap: [
         AppComponent
     ]
