@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Star Wars Universe",
   "scripts": {
+    "star": "node server.js",
     "webpack-dev": "cross-env NODE_ENV=development webpack --mode development",
     "webpack-prod": "cross-env NODE_ENV=production webpack --mode production",
     "build:dev": "webpack-dev-server --inline --hot --progress --port 8080",
     "build:prod": "npm run build:clean && ngc && npm run webpack-prod && npm run build:clean",
     "build:clean": "del-cli 'src/**/*.js' 'src/**/*.js.map' 'src/**/*.ngsummary.json' 'src/**/*.metadata.json' 'src/**/**/*.ngfactory.ts' 'src/**/*.ngstyle.ts' 'src/**/*.shim.ts'",
-    "serve": "lite-server"
+    "serve": "lite-server",
+    "heroku-postbuild": "npm run build:prod"
   },
   "repository": {
     "type": "git",
@@ -19,11 +21,11 @@
   "homepage": "https://github.com/rexrod/star-wars-universe",
   "dependencies": {
     "@angular/animations": "~7.2",
+    "@angular/cdk": "~7.2",
     "@angular/common": "~7.2",
     "@angular/compiler": "~7.2",
     "@angular/compiler-cli": "~7.2",
     "@angular/core": "~7.2",
-    "@angular/cdk": "~7.2",
     "@angular/forms": "~7.2",
     "@angular/http": "~7.2",
     "@angular/material": "~7.2",
@@ -33,6 +35,8 @@
     "@angular/router": "~7.2",
     "@angular/upgrade": "~7.2",
     "core-js": "~2.6",
+    "express": "^4.17.1",
+    "path": "^0.12.7",
     "rxjs": "~6.4",
     "zone.js": "~0.8"
   },
@@ -65,5 +69,9 @@
     "webpack-cli": "~3.2",
     "webpack-dev-server": "^3.1.14",
     "webpack-merge": "~4.2"
+  },
+  "engines": {
+    "node": "10.17.0",
+    "npm": "6.11.3"
   }
 }
