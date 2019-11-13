@@ -1,10 +1,10 @@
-# SWU
+# Star Wars Universe
 
  Star Wars Universe é um projeto feito com Angular e SWAPI.
 
 ## Demo
 
-https://dashboard.heroku.com/apps/swu-demo
+https://dashboard.heroku.com/apps/star-wars-universe-demo
 
 ## Dependências
 
@@ -17,13 +17,13 @@ https://dashboard.heroku.com/apps/swu-demo
 Baixe o repositório:
 
 ```sh
-git clone https://github.com/rexrod/swu
+git clone https://github.com/rexrod/star-wars-universe
 ```
 
 Entre na pasta
 
 ```sh
-cd swu
+cd star-wars-universe
 ```
 
 Instale as dependências:

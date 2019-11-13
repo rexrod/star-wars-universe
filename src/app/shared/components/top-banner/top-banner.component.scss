@@ -10,3 +10,26 @@
         }
     }
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    content: "\f078";
+    position: relative;
+    animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+        filter: alpha(opacity=40);
+        opacity: .4;
+        top: 0;
+    }
+    50% {
+        -ms-filter: none;
+        -webkit-filter: none;
+        filter: none;
+        opacity: 1;
+        top: -10px;
+    }
+}
