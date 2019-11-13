@@ -1,0 +1,23 @@
+<h1>{{data.name}}</h1>
+<top-banner [resource]="resource" [isControlEnabled]="false" [itemId]="itemId"></top-banner>
+<div class="details">
+    <h2>Detalhes</h2>
+    <pre>
+    climate: {{data.climate}}
+    diameter: {{data.diameter}}
+    gravity: {{data.gravity}}
+    name: {{data.name}}
+    orbital_period: {{data.orbital_period}}
+    population: {{data.population}}
+    rotation_period: {{data.rotation_period}}
+    surface_water: {{data.surface_water}}
+    terrain: {{data.terrain}}</pre>
+</div>
+<div *ngIf="data.residents.length" class="subdetails">
+    <h3>Habitantes</h3>
+    <li *ngFor="let resident of data.residents">{{resident}}</li>
+</div>
+<div class="subdetails">
+    <h3 *ngIf="data.films.length">Filmes</h3>
+    <li *ngFor="let film of data.films">{{film}}</li>
+</div>

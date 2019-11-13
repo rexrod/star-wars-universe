@@ -1,0 +1,24 @@
+@import "_custom_color_scheme.scss";
+$primary-color: map-get($map: $mat-swu-primary, $key: 500);
+$background-color: #E7EAEF;
+$box-shadow: 0px 3px 6px rgba(black, 0.16);
+$button-box-shadow: 0px 3px 6px rgba(black, 0.26);
+$card-background-color: white;
+
+.planet-card {
+  max-width: 400px;
+}
+
+.planet-header-image {
+  background-image: url(/assets/icons/icon-64x64.png);
+  background-size: cover;
+}
+
+.planets-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  .mat-card {
+    margin: 20px;
+  }
+}

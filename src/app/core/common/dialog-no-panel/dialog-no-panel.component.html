@@ -1,0 +1,25 @@
+<div class="dialog-container">
+  <div class="dialog-wrapper">
+    <!-- <div class="dialog-panel">
+      <div class="title">
+        <span class="text">SGM</span>
+      </div>
+      <div class="subtitle">
+        <span class="text">Sistema de Gerenciamento de Manutenção</span>
+      </div>
+    </div> -->
+    <div class="dialog-content-close">
+      <button type="button" class="mat-icon-button" mat-dialog-close>
+        <span class="mat-button-wrapper">
+          <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">close</mat-icon>
+        </span>
+      </button>
+    </div>
+    <div class="dialog-content">
+      <ng-content></ng-content>
+    </div>
+    <div class="dialog-footer">
+      <ng-content select="[footer-content]"></ng-content>
+    </div>
+  </div>
+</div>

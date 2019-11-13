@@ -1,0 +1,27 @@
+@import "_custom_color_scheme.scss";
+$color-font: map-get($map: $mat-swu-primary, $key: 500);
+
+.dialog-confirm{
+
+    div{
+        text-align: left;
+        .title-confirm {
+            font-size: 20px;
+        }    
+    }
+
+    .item-confirm{
+        text-align: left;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    .btn-confirm {
+        flex: 1 1 0%;
+        font-size: 14px;
+        font-weight: normal;
+        color: $color-font;
+        box-shadow: unset;
+    }
+
+}

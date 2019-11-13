@@ -1,25 +1,29 @@
-# star-wars-universe
+# SWU
 
- All about the Star Wars Universe with Angular 7 and Webpack 4
+ Star Wars Universe é um projeto feito com Angular e SWAPI.
+
+## Demo
+
+https://dashboard.heroku.com/apps/swu-demo
 
 ## Dependências
 
 * node 10
 * npm 6
-
+* Angular 7 ou 8
 
 ## Instruções
 
 Baixe o repositório:
 
 ```sh
-git clone https://github.com/rexrod/star-wars-universe
+git clone https://github.com/rexrod/swu
 ```
 
 Entre na pasta
 
 ```sh
-cd star-wars-universe
+cd swu
 ```
 
 Instale as dependências:
@@ -28,14 +32,16 @@ Instale as dependências:
 npm install
 ```
 
-Construa os pacotes:
+Gere os pacotes:
 
 ```sh
-npm run build:prod
+ng build --prod
 ```
 
-Rode o servidor:
+Ative o servidor:
 
 ```sh
-npm run serve
+npm start
 ```
+
+Acesse o endereço: [localhost:8080](localhost:8080)

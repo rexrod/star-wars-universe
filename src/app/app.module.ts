@@ -1,43 +1,32 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatListModule } from '@angular/material/list';
-import { MatButtonModule } from '@angular/material/button';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
-import { AppRoutingModule } from './app-routing.module';
-
+import 'hammerjs'; // Needed for Touch functionality of Material Components
+import { environment } from '../environments/environment';
+import { RoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './shared/components/home/home.component';
-
-import '../assets/styles';
-import { MatCardModule } from '@angular/material/card';
+import { CoreModule } from './core/core.module';
+import { UrlService } from './service/url.service';
+import { NotificationService } from './service/notification.service';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        HomeComponent
-    ],
-    imports: [
-        BrowserModule,
-        BrowserAnimationsModule,
-        HttpClientModule,
-        AppRoutingModule,
-        MatToolbarModule,
-        MatSidenavModule,
-        MatListModule,
-        MatButtonModule,
-        MatIconModule,
-        MatCardModule,
-    ],
-    providers: [
-    ],
-    bootstrap: [
-        AppComponent
-    ]
+  declarations: [AppComponent],
+  imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    CoreModule,
+    RoutingModule,
+    // Register a Service Worker (optional)
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+  ],
+  providers: [
+    UrlService,
+    NotificationService
+  ],
+  bootstrap: [AppComponent]
 })
-
 export class AppModule { }

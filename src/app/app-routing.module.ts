@@ -1,32 +1,40 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './core/layout/layout.component';
 
-import { HomeComponent } from './shared/components/home/home.component';
-import { AppComponent } from './app.component';
-import { LayoutComponent } from './shared/layout/layout.component';
-import { PlanetComponent } from './modules/planet/components/planet/planet.component';
+const routes: Routes = [
 
-const appRoutes: Routes = [
-    {
-        path: '',
-        component: LayoutComponent,
-        children: [
-            { path: '', component: HomeComponent },
-            // { path: 'planets', component: PlanetComponent },
-        ]
-    }
+  {
+    path: '',
+    component: LayoutComponent,
+    children: [
 
-    // { path: 'spaceships', loadChildren: './modules/spaceship/spaceship.module#SpaceshipModule' },
-
+      {
+        path: 'planets',
+        loadChildren: 'app/containers/planets/planets.module#PlanetsModule',
+      },
+      {
+        path: 'people',
+        loadChildren: 'app/containers/people/people.module#PeopleModule',
+      },
+      {
+        path: 'species',
+        loadChildren: 'app/containers/species/species.module#SpeciesModule',
+      },
+      {
+        path: '**',
+        loadChildren: 'app/containers/home/home.module#HomeModule',
+        pathMatch: 'full'
+      }
+     
+    ]
+  }
 ];
 
 @NgModule({
-    imports: [
-        RouterModule.forRoot(appRoutes)
-    ],
-    exports: [
-        RouterModule
-    ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
+  providers: []
 })
-
-export class AppRoutingModule { }
+export class RoutingModule {
+}

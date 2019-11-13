@@ -1,0 +1,10 @@
+<div>
+  <span class="title-delete">Deseja deletar o item?</span>
+</div>
+<div mat-dialog-content>
+  <p class="item-delete">{{ data.displayName }}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button class="btn-rounded btn-delete" mat-dialog-close>CANCELAR</button>
+    <button mat-raised-button class="btn-rounded btn-delete" (click)="confirm()">DELETAR</button>
+</div>

@@ -1,0 +1,27 @@
+@import "_custom_color_scheme.scss";
+$color-font: map-get($map: $mat-swu-primary, $key: 500);
+
+.dialog-delete{
+
+    div{
+        text-align: left;
+        .title-delete {
+            font-size: 20px;
+        }    
+    }
+
+    .item-delete{
+        text-align: left;
+        font-weight: normal;
+        color: rgba(0, 0, 0, 0.54);
+    }
+
+    .btn-delete {
+        flex: 1 1 0%;
+        font-size: 14px;
+        font-weight: normal;
+        color: $color-font;
+        box-shadow: unset;
+    }
+
+}

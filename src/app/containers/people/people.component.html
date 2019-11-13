@@ -1,0 +1,28 @@
+<div class="people-content">
+
+  <top-banner [resource]="resource"></top-banner>
+
+  <mat-card class="people-card" *ngFor="let p of people">
+    <mat-card-header>
+      <div mat-card-avatar class="people-header-image"></div>
+      <mat-card-title>{{p.name}}</mat-card-title>
+      <mat-card-subtitle>{{p.skin_color}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/img/people/card_default.png" alt="Photo of a Star Wars">
+    <mat-card-content>
+      <p>
+        height: {{p.height}},
+        mass: {{p.mass}},
+        hair_color: {{p.hair_color}},
+        skin_color: {{p.skin_color}},
+        eye_color: {{p.eye_color}},
+        birth_year: {{p.birth_year}},
+        gender: {{p.gender}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="details(p)">VER MAIS</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

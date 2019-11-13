@@ -1,0 +1,28 @@
+<div class="planets-content">
+
+  <top-banner [resource]="resource"></top-banner>
+
+  <mat-card class="planet-card" *ngFor="let planet of planets">
+    <mat-card-header>
+      <div mat-card-avatar class="planet-header-image"></div>
+      <mat-card-title>{{planet.name}}</mat-card-title>
+      <mat-card-subtitle>{{planet.terrain}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/img/planets/card_default.png" alt="Photo of a Star Wars">
+    <mat-card-content>
+      <p>
+        rotation_period: {{planet.rotation_period}},
+        orbital_period:{{planet.orbital_period}},
+        diameter: {{planet.diameter}},
+        climate: {{planet.climate}},
+        gravity: {{planet.gravity}},
+        surface_water: {{planet.surface_water}},
+        population: {{planet.population}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button  (click)="details(planet)" >VER MAIS</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

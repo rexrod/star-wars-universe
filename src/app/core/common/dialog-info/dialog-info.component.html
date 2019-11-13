@@ -1,0 +1,14 @@
+<div class="info">
+    <div class="title">{{ data.title }}</div>
+    <div class="message">{{ data.message }}</div>
+    <div class="content">
+        <div class="id" (click)="redirectTo()">
+            <span>{{data.id}}</span>
+        </div>
+    </div>
+    <div class="actions">
+        <button mat-raised-button class="no-shadow btn-rounded btn-save btn-border" (click)="close(data)">
+            FECHAR
+        </button>
+    </div>
+</div>

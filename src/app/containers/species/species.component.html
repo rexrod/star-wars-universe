@@ -1,0 +1,29 @@
+<div class="species-content">
+
+  <top-banner [resource]="resource"></top-banner>
+
+  <mat-card class="specie-card" *ngFor="let specie of species">
+    <mat-card-header>
+      <div mat-card-avatar class="specie-header-image"></div>
+      <mat-card-title>{{specie.name}}</mat-card-title>
+      <mat-card-subtitle>{{specie.classification}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="assets/img/species/card_default.png" alt="Photo of a Star Wars">
+    <mat-card-content>
+      <p>
+        designation: {{specie.designation}},
+        average_height: {{specie.average_height}},
+        skin_colors: {{specie.skin_colors}},
+        hair_colors: {{specie.hair_colors}},
+        eye_colors: {{specie.eye_colors}},
+        average_lifespan: {{specie.average_lifespan}},
+        homeworld: {{specie.homeworld}},
+        language: {{specie.language}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="details(specie)">VER MAIS</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>

@@ -1,0 +1,40 @@
+<div class="user-button" #userButton (furyClickOutside)="onClickOutside()" fxFlex="grow">
+  <button class="button" mat-button (click)="toggleDropdown()" [class.open]="isOpen" fxFlex="grow">
+    <span fxLayout="row" fxLayoutAlign="start center">
+      <!-- <img class="avatar" [src]="userPhoto"> -->
+      <div class="name-profile">
+        <span class="name" fxHide fxShow.gt-sm></span>
+        <span class="profile" fxHide fxShow.gt-sm><small></small></span>
+      </div>
+      <mat-icon class="icon" fxHide fxShow.gt-sm>keyboard_arrow_down</mat-icon>
+    </span>
+  </button>
+
+  <div class="dropdown mat-elevation-z1" [class.open]="isOpen">
+    <div class="content">
+      <div class="list">
+        <!-- <div class="item" matRipple>
+          <mat-icon class="icon">account_circle</mat-icon>
+          <span class="title"> Editar Perfil</span>
+        </div> -->
+        <!-- <div class="item" matRipple>
+          <mat-icon class="icon">settings</mat-icon>
+          <span class="title">Configurações</span>
+        </div>
+        <div class="item" matRipple>
+          <mat-icon class="icon">help</mat-icon>
+          <span class="title">Ajuda</span>
+        </div> -->
+        <!-- <mat-divider></mat-divider> -->
+        <!--<div class="item" matRipple [routerLink]="['/login']">
+          <mat-icon class="icon">exit_to_app</mat-icon>
+          <span class="title">Logout</span>
+        </div>-->
+        <div class="item" matRipple (click)="logout()">
+          <mat-icon class="icon">exit_to_app</mat-icon>
+          <span class="title">Sair</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

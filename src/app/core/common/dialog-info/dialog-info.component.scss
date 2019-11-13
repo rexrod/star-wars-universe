@@ -1,0 +1,68 @@
+@import "_custom_color_scheme.scss";
+$theme-background: map-get($map: $mat-swu-primary, $key: 500);
+$font-color: map-get($map: $mat-swu-primary, $key: 500);
+
+.dialog-info {
+    .info {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.4vw;
+            font-weight: 500;
+            color: $font-color;
+            height: 30%;
+        }
+
+        .message {
+            display: flex;
+            font-size: 1vw;
+            justify-content: center;
+            align-items: center;
+            height: 14%;
+        }
+
+        .content {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 32%;
+
+            .id {
+                border-radius: 40px;
+                background-color: rgba(234, 236, 237, 0.1);
+                border: 1px rgba(234, 236, 237, 1) solid;
+                padding-left: 7%;
+                padding-right: 7%;
+                padding-top: 2%;
+                padding-bottom: 2%;
+                text-align: center;
+                cursor: pointer;
+                span {
+                    font-size: 2.3vw;
+                }
+            }
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            height: 24%;
+            align-items: center;
+            button {
+                width: 27%;
+                justify-content: center;
+                display: flex;
+                .mat-button-wrapper {
+                    font-size: 1vw;
+                    color: $font-color;
+                }
+            }
+        }
+    }
+}

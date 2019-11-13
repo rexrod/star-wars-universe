@@ -1,0 +1,26 @@
+<h1>{{data.name}}</h1>
+<top-banner [resource]="resource" [isControlEnabled]="false" [itemId]="itemId"></top-banner>
+<div class="details">
+    <h2>Detalhes</h2>
+    <pre>
+classification: {{data.classification}},
+designation: {{data.designation}},
+average_height: {{data.average_height}},
+skin_colors: {{data.skin_colors}},
+hair_colors: {{data.hair_colors}},
+eye_colors: {{data.eye_colors}},
+average_lifespan: {{data.average_lifespan}},
+language: {{data.language}}</pre>
+</div>
+<div class="subdetails">
+    <h3>Paneta de Origem</h3>
+    <li>{{data.homeworld}}</li>
+</div>
+<div class="subdetails" *ngIf="data.films.length">
+    <h3>Filmes</h3>
+    <li *ngFor="let film of data.films">{{film}}</li>
+</div>
+<div class="subdetails" *ngIf="data.people.length">
+    <h3>Personagens</h3>
+    <li *ngFor="let p of data.people">{{p}}</li>
+</div>

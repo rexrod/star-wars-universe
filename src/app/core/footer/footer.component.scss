@@ -1,0 +1,19 @@
+@import "var";
+@import "_custom_color_scheme.scss";
+$theme-background: map-get($map: $mat-swu-primary, $key: 500);
+
+.footer {
+  justify-content: center;
+
+  #version {
+    height: 15px;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    color: $theme-background;
+    font-size: small;
+    display: grid;
+  }
+
+}

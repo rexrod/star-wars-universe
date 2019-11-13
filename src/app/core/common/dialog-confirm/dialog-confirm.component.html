@@ -1,0 +1,10 @@
+<div>
+  <span class="title-confirm">{{ data?.question }}</span>
+</div>
+<div mat-dialog-content>
+  <p class="item-confirm">{{ data?.infoName }}</p>
+</div>
+<div mat-dialog-actions>
+    <button mat-raised-button class="btn-rounded btn-confirm" mat-dialog-close>{{ data?.buttonCancelLabel }}</button>
+    <button mat-raised-button class="btn-rounded btn-confirm" (click)="confirm()">{{ data?.buttonConfirmLabel }}</button>
+</div>
