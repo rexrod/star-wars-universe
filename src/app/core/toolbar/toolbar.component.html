@@ -8,8 +8,14 @@
 
     <!-- <fury-toolbar-search-bar fxFlex="500px" fxHide fxShow.gt-md></fury-toolbar-search-bar> -->
   </div>
-  <div fxLayout="row" fxLayoutAlign="center center">
+  <div fxLayout="column" fxLayoutAlign="center center">
     <span class="name-item"> Star Wars Universe </span>
+    <nav mat-tab-nav-bar>
+      <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        {{link.label}}
+      </a>
+    </nav>
   </div>
   <div fxLayout="row">
 
