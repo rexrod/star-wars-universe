@@ -11,8 +11,12 @@
   <div fxLayout="column" fxLayoutAlign="center center">
     <span class="name-item"> Star Wars Universe </span>
     <nav mat-tab-nav-bar>
-      <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"
-        [active]="rla.isActive">
+      <a mat-tab-link
+         *ngFor="let link of navLinks"
+         [routerLink]="['/'+link.path]"
+         routerLinkActive #rla="routerLinkActive"
+         [routerLinkActiveOptions]="{exact:true}"
+         [active]="rla.isActive">
         {{link.label}}
       </a>
     </nav>

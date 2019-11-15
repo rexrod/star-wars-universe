@@ -11,9 +11,9 @@ export class ToolbarComponent implements OnInit {
   @Input('quickpanel') quickpanel: MatSidenav;
   navLinks = [
     {label: "Home", path: ""},
-    {label: "Planetas", path: "/planets"},
-    {label: "Pessoas", path: "/people"},
-    {label: "Espécies", path: "/species"},
+    {label: "Planetas", path: "planets"},
+    {label: "Pessoas", path: "people"},
+    {label: "Espécies", path: "species"},
   ]
 
   constructor(
