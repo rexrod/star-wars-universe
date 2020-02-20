@@ -45,3 +45,7 @@ npm start
 ```
 
 Acesse o endereço: [localhost:8080](localhost:8080)
+
+## Designer
+Emanuel Jesus Santos Pinto Junior
+https://www.linkedin.com/in/emanuelmao/
