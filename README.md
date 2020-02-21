@@ -50,5 +50,5 @@ Acesse o endereço: [localhost:8080](localhost:8080)
 
 **Emanuel Jesus Santos Pinto Junior**
 
-**LinkedIn:** https://br.linkedin.com/in/emanuelmao
+**LinkedIn:** https://br.linkedin.com/in/emanuelmao  
 **Spec:** https://xd.adobe.com/spec/57d6998c-5470-4fe2-4209-25f30a6184b6-21e7/grid
