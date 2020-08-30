@@ -1,11 +1,7 @@
-const HTTPS = 'https://';
-const URI = 'swapi.co/api/';
-
-
 export const environment = {
   production: false,
   origin: {
-    path: HTTPS + URI,
+    path: "https://swapi.dev/api/",
   },
   timeout: 30000
 };
