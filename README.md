@@ -4,7 +4,7 @@
 
 ## Demo
 
-https://dashboard.heroku.com/apps/star-wars-universe-demo
+https://star-wars-universe-demo.herokuapp.com
 
 ## Dependências
 
